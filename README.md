@@ -1,6 +1,18 @@
 # Language of Genome for Wheat (LOGOWheat)
 Deep learning-based prediction of regulatory effects for noncoding variants in wheats
 
+# Usage
+```
+python getScoreS.py  -r ATCACTGTGACTGAC -a ATCACTNTGACTGAC -w  epi_weights.hdf5 -p 16 -o  ./variantscore/ 
+
+python getScoreM.py  -r ATCACTGTGACTGAC -i chr6D_+_329839800_329840000 -w  epi_weights.hdf5 -p 16 -o  ./variantscore/
+
+python getScoreSs.py  -r ATCACTGTGACTGAC -a ATCACTNTGACTGAC -w  epi_weights.hdf5 -p 16 -o  ./variantscore/ 
+
+python getScoreMs.py  -r ATCACTGTGACTGAC -i chr6D_+_329839800_329840000 -w  epi_weights.hdf5 -p 16 -o  ./variantscore/
+
+```
+
 # Installation
 ```
 conda create --name logowheat python==3.6.9 tensorflow-gpu==2.0 keras==2.3.1 numpy pandas tqdm scipy scikit-learn matplotlib jupyter notebook nb_conda
@@ -148,11 +160,4 @@ python 06_deep_sea_train_classification_tfrecord_for_test.py \
   --use-position \
   --verbose 1 \
   --task test
-```
-# Scoring
-```
-
-python python getScoreM.py  -r refSeq -i chr6D_+_329839800_329840000 -w  epi_weights.hdf5  -p 16 -o  ./variantscore/
-
-
 ```
