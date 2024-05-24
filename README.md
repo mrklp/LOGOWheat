@@ -3,13 +3,9 @@ Deep learning-based prediction of regulatory effects for noncoding variants in w
 
 # Usage
 ```
-python getScoreS.py  -r ATCACTGTGACTGAC -a ATCACTNTGACTGAC -w  epi_weights.hdf5 -p 16 -o  ./variantscore/ 
+python getScore.py  -r refSeq -a altSeq -w  epi_weights.hdf5  -p 16 -o  ./variantscore/  
 
-python getScoreM.py  -r ATCACTGTGACTGAC -i chr6D_+_329839800_329840000 -w  epi_weights.hdf5 -p 16 -o  ./variantscore/
-
-python getScoreSs.py  -r ATCACTGTGACTGAC -a ATCACTNTGACTGAC -w  epi_weights.hdf5 -p 16 -o  ./variantscore/ 
-
-python getScoreMs.py  -r ATCACTGTGACTGAC -i chr6D_+_329839800_329840000 -w  epi_weights.hdf5 -p 16 -o  ./variantscore/
+python getMap.py  -r refSeq -i chr6D_+_329839800_329840000 -w  epi_weights.hdf5  -p 16 -o  ./variantscore/
 
 ```
 
